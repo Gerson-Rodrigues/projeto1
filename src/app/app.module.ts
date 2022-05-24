@@ -8,9 +8,9 @@ import { CadastroTarefasComponent } from './cadastro-tarefas/cadastro-tarefas.co
 import { ConsultaTarefasComponent } from './consulta-tarefas/consulta-tarefas.component';
 
 import { Routes, RouterModule} from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
-
   {path: 'painel-principal',component: PainelPrincipalComponent},
   {path: 'cadastro-tarefas',component: CadastroTarefasComponent},
   {path: 'consulta-tarefas',component: ConsultaTarefasComponent}
@@ -25,7 +25,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-   RouterModule.forRoot(routes)
+   RouterModule.forRoot(routes),
+   //registrando os módulos de formulário
+   ReactiveFormsModule,
+   FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

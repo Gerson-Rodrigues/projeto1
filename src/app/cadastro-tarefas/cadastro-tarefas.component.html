@@ -1,10 +1,49 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 front-weight-bold text-primary">
-            Cadastro de Taferfas
+            Cadastro de Tarefas
         </h6>
     </div>
     <div class="card-body">
+        <form [formGroup]="formCadastroTarefa" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Nome da Tarefa:</label>
+                    <input type="text" class="form-control" formControlName="nome" />
+                </div>
+                <div class="col-md-3">
+                    <label>Data da Tarefa:</label>
+                    <input type="date" class="form-control" formControlName="data" />
+                </div>
+                <div class="col-md-3">
+                    <label>Hora da Tarefa:</label>
+                    <input type="time" class="form-control" formControlName="hora" />
+                </div>
+                <div class="col-md-9">
+                    <div class="col-md-6">
+                        <label>Descrição da Tarefa:</label>
+                        <textarea class="form-control" formControlName="descricao"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Prioridade:</label>
+                        <select class="form-control" formControlName="prioridade">
+                            <option value="">Escolha uma opção</option>
+                            <option value="1">Baixa</option>
+                            <option value="2">Média</option>
+                            <option value="3">Alta</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <button class="btn btn-success" type="submit"><i class="fa fa-check-circle"></i> Cadastrar Tarefa</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
+    <div class="card-footer">
+        <h6>Rodapé da Página</h6>
     </div>
 </div>
