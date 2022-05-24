@@ -44,7 +44,9 @@ ng g c cadastroTarefas
 
 ng g c consultaTarefas
 
+https://angular.io/api/router
 
+SPA (single page application)
 
 
 
