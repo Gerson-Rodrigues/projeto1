@@ -37,6 +37,36 @@ export class TarefasService {
       hora:'08:00',
       descricao:'Só alegria',
       prioridade:'2'    
+    }, {
+      nome:'Aula de Comandos DOS',
+      data:'2001-01-01',
+      hora:'01:00',
+      descricao:'Comandos em Ação',
+      prioridade:'1'    
+    },{
+      nome:'Aula de Inglês Técnico',
+      data:'2020-08-10',
+      hora:'05:00',
+      descricao:'Analisando idiomas',
+      prioridade:'2'    
+    },{
+      nome:'Aula de Protótipos',
+      data:'2012-05-02',
+      hora:'10:00',
+      descricao:'Partes Móveis',
+      prioridade:'3'    
+    },{
+      nome:'Aula de HTML5',
+      data:'2022-02-11',
+      hora:'09:00',
+      descricao:'Documentação Completa',
+      prioridade:'1'    
+    },{
+      nome:'Aula de Python',
+      data:'2022-03-01',
+      hora:'19:00',
+      descricao:'Top Demais',
+      prioridade:'3'    
     },
   ];  //inicializando com um array (lista)
   constructor() { }

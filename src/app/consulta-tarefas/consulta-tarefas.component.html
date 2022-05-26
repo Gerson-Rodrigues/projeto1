@@ -5,6 +5,9 @@
         </h6>
     </div>
     <div class="card-body">
+             <!--Régua da Paginação-->
+        <pagination-controls (pageChange)="handlePageChange($event)" previousLabel=" Back"
+        nextLabel="Next "></pagination-controls>
         <div class="table-responsive">
             <table class="table table hover table-striped">
                 <thead>
@@ -42,9 +45,7 @@
                 </tbody>
 
             </table>
-            <!--Régua da Paginação-->
-            <pagination-controls (pageChange)="handlePageChange($event)" previousLabel="Página Anterior"
-                nextLabel="Próxima Página"></pagination-controls>
+            
         </div>
     </div>
     <div class="card-footer">
@@ -53,5 +54,8 @@
                 Quantidade de tarefas: {{dados.length}}
             </td>
         </tr>
+        <!--Régua da Paginação-->
+        <pagination-controls (pageChange)="handlePageChange($event)" previousLabel=" Back"
+        nextLabel="Next "></pagination-controls>
     </div>
 </div>

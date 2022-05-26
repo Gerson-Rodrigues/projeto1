@@ -52,9 +52,9 @@ Link.. Consulta formulários reativos
 
 https://angular.io/guide/reactive-formulários
 
-(capturar os dadosdas tarefas =)
+(capturar os dados das tarefas =)
 
-Criando um artefato no Angularpra desenvolvermos o modelo de dados 
+Criando um artefato no Angular pra desenvolvermos o modelo de dados 
 que será utilizado para capturar as informações das tarefas.
 
 ng generate interface models/Tarefa model
