@@ -48,17 +48,52 @@ https://angular.io/api/router
 
 SPA (single page application)
 
+Link.. Consulta formulários reativos
+
+https://angular.io/guide/reactive-formulários
+
+(capturar os dadosdas tarefas =)
+
+Criando um artefato no Angularpra desenvolvermos o modelo de dados 
+que será utilizado para capturar as informações das tarefas.
+
+ng generate interface models/Tarefa model
+
+Explicando o comando:
+<Criação><Artefato><PASTA><NOME><TIPO>
 
 
+Criando um outro artefato no projeto que irá gravar as informações
+das tarefas em memória no projeto Angular(Projeto1)
+
+ng g service services/tarefas
+<criação><artefato><pasta><nome>
+
+/src/app/services/tarefas.services.ts
+Criando funções para armazenar os dados das 
+tarefas cadastradas em memória
+
+===================================================================
+
+NGX - PAGINATION 
+
+https://www.npmjs.com/package/ngx-PAGINATION
+Componente desenvolvido para Angular voltado para realização
+de paginação de dados (tabelas, listas ect)
 
 
+npm i ngx-PAGINATION
+após terminar. . . 
+verificar a instalação no /packckage.json
+verificar se a biblioteca foi instalada
+
+ir no ../app.module.ts
+e reconhecer a biblioteca
+
+No app.module.ts fazer a importação ngx. . . 
 
 
-
-
-
-
-
+ir para a pagina de consultaTarefas
 
 
 

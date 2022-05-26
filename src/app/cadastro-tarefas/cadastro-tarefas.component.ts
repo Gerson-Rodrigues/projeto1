@@ -1,6 +1,6 @@
-import { visitAll } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TarefasService } from '../services/tarefas.service';
 
 @Component({
   selector: 'app-cadastro-tarefas',
@@ -11,8 +11,8 @@ export class CadastroTarefasComponent implements OnInit {
   //Atributos (campos)
   message = "";
   //método Construtor--> incializar os serviços di componente 
-  constructor() { }
-  //função executa antes do componente abrir na página
+  constructor(private tarefasService: TarefasService) { }
+
   ngOnInit(): void {
   }
 
@@ -41,7 +41,13 @@ export class CadastroTarefasComponent implements OnInit {
   //função para capturar o evento SUBMIT do formulario
   onSubmit(): void {
     //Imprimir o conteudo do formulario
-    console.log(this.formCadastroTarefa.value);
+    //console.log(this.formCadastroTarefa.value);
+    this.tarefasService.addTarefa(this.formCadastroTarefa.value);
+    //limpar os campos do formulario
+    this.formCadastroTarefa.reset();
+    //mensagem de . . . . . 
+    //window.alert('Tarefa cadastrada com sucesso!!!!');
+    this.message = 'Tarefa cadastrada com sucesso!!!!';
   }
   //função para limpar menssagem
   clearMessage() {

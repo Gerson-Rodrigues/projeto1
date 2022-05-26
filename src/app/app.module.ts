@@ -9,6 +9,7 @@ import { ConsultaTarefasComponent } from './consulta-tarefas/consulta-tarefas.co
 
 import { Routes, RouterModule} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 const routes: Routes = [
   {path: 'painel-principal',component: PainelPrincipalComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
    RouterModule.forRoot(routes),
    //registrando os módulos de formulário
    ReactiveFormsModule,
-   FormsModule
+   FormsModule,
+   NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
