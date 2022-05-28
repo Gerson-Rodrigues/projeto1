@@ -20,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of dados | paginate : {itemsPerPage : 3, currentPage: page}">
+                    <tr *ngFor="let item of dados |filter:filtro| paginate : {itemsPerPage : 3, currentPage: page}">
                         <td>{{item.nome}}</td>
                         <td>{{item.data}}</td>
                         <td>{{item.hora}}</td>
@@ -37,7 +37,7 @@
                             </button>
                             &nbsp;
                             <button class="btn btn-sm btn-outline-danger" data-target="#modal_exclusao"
-                                data-toggle="modal" title="Excluir tarefa">
+                                data-toggle="modal" title="Excluir tarefa" >
                                 <i class="fa fa-trash"></i>
                             </button>
                         </td>
@@ -51,7 +51,7 @@
     <div class="card-footer">
         <tr>
             <td colspan="5">
-                Quantidade de tarefas: {{dados.length}}
+                Quantidade de tarefas: {{dados.length }}
             </td>
         </tr>
         <!--Régua da Paginação-->
