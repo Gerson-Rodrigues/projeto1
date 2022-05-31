@@ -10,14 +10,16 @@ import { TarefasService } from '../services/tarefas.service';
 export class CadastroTarefasComponent implements OnInit {
   //Atributos (campos)
   message = "";
-  //método Construtor--> incializar os serviços di componente 
+  //método Construtor--> incializar os serviços di componente
   constructor(private tarefasService: TarefasService) { }
 
   ngOnInit(): void {
+    // TODO document why this method 'ngOnInit' is empty
+
   }
 
   formCadastroTarefa = new FormGroup({
-    //Capaturando cada campo do formulário 
+    //Capaturando cada campo do formulário
     //nome da tarefa (campo do fomulário)
     nome: new FormControl('', [
       Validators.required, //campo Obrigatório
@@ -29,7 +31,7 @@ export class CadastroTarefasComponent implements OnInit {
     descricao: new FormControl('', [Validators.required, Validators.maxLength(300),]),
     prioridade: new FormControl('', [Validators.required,]),
   });
-  //Criando um objeto para que seja possivel utilizar 
+  //Criando um objeto para que seja possivel utilizar
   //o FormControl (formCadastroTarefa) na página HTML
 
   get form(): any {
@@ -45,7 +47,7 @@ export class CadastroTarefasComponent implements OnInit {
     this.tarefasService.addTarefa(this.formCadastroTarefa.value);
     //limpar os campos do formulario
     this.formCadastroTarefa.reset();
-    //mensagem de . . . . . 
+    //mensagem de . . . . .
     //window.alert('Tarefa cadastrada com sucesso!!!!');
     this.message = 'Tarefa cadastrada com sucesso!!!!';
   }
