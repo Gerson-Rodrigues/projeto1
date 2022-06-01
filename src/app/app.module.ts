@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
-import { PainelPrincipalComponent } from './painel-principal/painel-principal.component';
 import { CadastroTarefasComponent } from './cadastro-tarefas/cadastro-tarefas.component';
 import { ConsultaTarefasComponent } from './consulta-tarefas/consulta-tarefas.component';
-
-import { Routes, RouterModule} from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PainelPrincipalComponent } from './painel-principal/painel-principal.component';
 
 const routes: Routes = [
   {path: 'painel-principal',component: PainelPrincipalComponent},
